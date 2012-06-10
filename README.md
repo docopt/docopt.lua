@@ -1,5 +1,11 @@
 # Lua Port of the docopt Command Line Processor
 
+docopt creates _beautiful_ command-line interfaces.
+
+docopt is a parser for program command line help messages which will use
+the help message itself to validate the arguments passed into the
+program, and generate a handy table of the results.
+
 See http://docopt.org for details.
 
 # Basic Usage
