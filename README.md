@@ -1,3 +1,7 @@
+# Work In Progress
+
+This code is still under development, and doesn't work yet.
+
 # Lua Port of the docopt Command Line Processor
 
 [docopt](http://docopt.org) creates _beautiful_ command-line interfaces.
