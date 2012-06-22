@@ -48,13 +48,17 @@ local function class(base, init)
     return c
 end
 --- Process command-line arguments based on help string.
--- docopt will parse the help message to see what the value usage cases
--- are, and also to see the options.  Then it will parse the list of arguments
--- to validate them.  If the arguments are in a correct form, they are returned 
+--
+-- docopt() will parse the help message to see what the value usage cases
+-- are, and also to see the options.  Then it will parse the list of
+-- command line arguments to validate them.
+--
+-- If the arguments are in a correct form, they are returned
 -- as a structured table.  Otherwise (if a non-existent argument is used
 -- for example) docopt will print the help message and exit.
--- @param help_message Command line help text which shows the usage and lists
--- all the options available.
+--
+-- @param help_message Command line help text which shows the usage and
+-- lists all the options available.
 -- @param arg_list (optional) A list of command line arguments to
 -- process. Defaults to the global 'arg' if arg_list is nil.
 -- @param version (optional) The version of the program.
