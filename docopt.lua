@@ -47,6 +47,27 @@ local function class(base, init)
     setmetatable(c, mt)
     return c
 end
+
+
+--
+-- Pattern class.
+--
+local Pattern = class(  function(self, name, ...)
+                            self.name = assert(name)
+                            self.children = {...}
+                        end)
+
+function Pattern:__eq(other)
+    return __tostring(self) == __tostring(other)
+end
+
+function Pattern:__tostring()
+    local children_repr = ""
+    for i, child in pairs(self.children) do
+        children_repr = children_repr .. tostring(child)
+    end
+    return string.format("%s(%s)", self.name, children_repr)
+end
 --- Process command-line arguments based on help string.
 --
 -- docopt() will parse the help message to see what the value usage cases
